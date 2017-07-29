@@ -1,0 +1,22 @@
+{
+  "name": "acme-users-pg",
+  "version": "1.0.0",
+  "description": "",
+  "main": "db.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "start:dev": "DATABASE_URL=postgres://localhost/acmeusersdb nodemon server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "body-parser": "^1.17.2",
+    "bootstrap": "^3.3.7",
+    "express": "^4.15.3",
+    "method-override": "^2.3.9",
+    "nunjucks": "^3.0.1",
+    "pg": "^7.0.2"
+  }
+}

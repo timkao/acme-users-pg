@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <link rel='stylesheet' href='/vendor/bootstrap/dist/css/bootstrap.css' />
+  </head>
+  <body>
+    <div class='container'>
+      <h1 class='well'>Acme Users PG</h1>
+      <ul class = 'nav nav-tabs'>
+        <li {% if showHome %}class='active'{% endif %}>
+          <a href='/'>Home</a>
+        </li>
+        <li {% if showUsers %}class='active' {% endif %}>
+          <a href='/users'>Users ({{namesLength}})</a>
+        </li>
+        <li {% if showManagers %}class='active'{% endif %}>
+          <a href='/users/managers'>Managers ({{managersLength}})</a>
+        </li>
+      </ul>
+      {% block content %}
+
+      {% endblock %}
+    </div>
+  </body>
+</html>

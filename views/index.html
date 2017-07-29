@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<form action="/users" method="POST" class="well">
+  <div class="form-group">
+   <input type="text" placeholder="name" class="form-control" name="name">
+  </div>
+  <div class="check-box">
+    <label for="isManager">Is Manager</label>
+    <input type="checkbox" name="isManager">
+  </div>
+  <div>
+    <input type="submit" value="Save" class="btn btn-success">
+  </div>
+</form>
+
+
+{% endblock %}

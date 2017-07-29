@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h1>Managers</h1>
+
+
+<ul class="list-group">
+
+  {% for manager in managers %}
+  <li class="list-group-item"><p class='lead'>{{manager.name}}</p>
+    <form action="/users/{{manager.id}}?_method=PUT" method="POST">
+      <button class="btn btn-danger btn-block">Remove as Manager</button>
+    </form>
+  </li>
+  {% endfor %}
+
+</ul>
+
+
+
+{% endblock %}
